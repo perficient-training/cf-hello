@@ -1,0 +1,7 @@
+---
+applications:
+- name: cf-hello
+  path: build/libs/cf-hello.jar
+  random-route: true
+  env:
+    MESSAGE: Hello from Cloud Foundry
