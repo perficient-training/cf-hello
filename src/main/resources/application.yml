@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: cf-hello
+
+security:
+  basic:
+    enabled: false

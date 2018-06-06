@@ -1,12 +1,22 @@
 plugins {
     id "java"
     id "org.springframework.boot" version "1.5.13.RELEASE"
+    id "io.spring.dependency-management" version "1.0.4.RELEASE"
 }
 
 repositories {
     mavenCentral()
 }
 
+dependencyManagement {
+    imports {
+        mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:1.6.0.RELEASE"
+    }
+}
+
+
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile("io.pivotal.spring.cloud:spring-cloud-services-starter-config-client")
+
 }
